@@ -1,6 +1,6 @@
 # freeclash
 简介:
-可以获取免费的clash节点,通过这个软件爬取动态的节点,映射在本地的"http://127.0.0.1:2025"地址上
+可以获取免费的clash节点,通过这个软件爬取动态的节点,映射在本地的"http://127.0.0.1:2025" 地址上
 
 使用:
 "https://github.com/tolinkshare2/tolinkshare2.github.io"存在一个clash节点链接,可以进行试用,但过一会就会变动失效.
