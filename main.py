@@ -13,11 +13,7 @@ headers = {
 
 def gethtml():
     try:
-        html = get("https://github.site/tolinkshare2/tolinkshare2.github.io/blob/main/README.md", headers=headers,verify=False, proxies={})
-        if html.status_code != 200:
-            html = get("https://bgithub.xyz/tolinkshare2/tolinkshare2.github.io/blob/main/README.md", headers=headers,verify=False, proxies={})
-        if html.status_code != 200:
-            html = get("https://github.com/tolinkshare2/tolinkshare2.github.io/blob/main/README.md", headers=headers,verify=False, proxies={})
+        html = get("https://github.com/tolinkshare2/tolinkshare2.github.io/blob/main/README.md", headers=headers,verify=False,proxies = {'http': None,'https': None})
         return html.text
     except Exception as e:
         print(f"请求失败: {e}")
@@ -52,10 +48,9 @@ def startflask():
 
     @app.route('/')
     def got():
-        txt = main()
-        return txt
+        return main()
 
-    app.run("127.0.0.1", 2025)
+    app.run("0.0.0.0", 52025)
 def main():
     novpn()
     html=gethtml()
@@ -64,4 +59,4 @@ def main():
     return clash
 
 startflask()
-
+# print(main())
